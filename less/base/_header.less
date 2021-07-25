@@ -1,0 +1,44 @@
+.header {
+    height: 100px;
+    background-color: @main-color-text-black;
+    opacity: 0.65;
+    &-inner {
+        display: flex;
+        height: 100px;
+        .logo {
+            margin-right: 70px;
+            &-img {
+                padding: 23px 0;
+            }
+        }
+        .menu {
+            margin-right: 100px;
+            .navbar {
+                padding: 38px 20px;
+                .nav-item {
+                    display: inline-block;
+                    text-align: center; 
+                    padding: 0 20px;
+                    a {
+                        color: @main-color-text-white;
+                        font-size: @main-font-size-16px;
+                    }
+                }
+            }
+        }
+        .option {
+            .navoption {
+                padding: 30px 10px;
+                .nav-option {
+                    display: inline-block;
+                    width: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    a {
+                        color: @main-color-text-white;
+                    }
+                }
+            }
+        }
+    }
+}

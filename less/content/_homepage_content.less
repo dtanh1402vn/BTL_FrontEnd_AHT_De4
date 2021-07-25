@@ -1,0 +1,164 @@
+//Banner
+.banner {
+    height: 850px;
+    img {
+        margin-top: -100px;
+        width: 100%; 
+    }
+    .content {
+        margin-top: -685px;
+        position: absolute;
+        color: @main-color-text-white;
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 40px;
+            margin-top: -35px;
+        }
+        p {
+            margin-top: -10px;
+            font-size: 14px;
+        }      
+    }
+    &-btn {
+        width: 170px;
+        height: 50px;
+        margin-top: 62px;
+        color: @main-color-text-white;
+        text-align: center;
+        padding: 12px;
+        border: 1px solid @main-color-text-white;
+        box-sizing: border-box;
+    }
+}
+
+//Category Product
+.category-product {
+    margin-top: -77px;
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+    }
+    .col {
+        width: 33.3333%;
+    }
+}
+.category-product .picture {
+    height: 50%;
+}
+.category-product .content {
+    height: 50%;
+    text-align: center;
+    background-color :@main-color-text-white;
+}
+.category-product .icon {
+    padding-top: 47px;
+}
+.category-product .text {
+    padding-top: 30px;
+    &-title {
+        color: @main-color-text-black;
+        font-weight: 700;
+        font-size: @main-font-size-18px;
+    }
+    &-summary {
+        color: @main-color-text-gray;
+        font-size: @main-font-size-14px;
+        font-weight: 400;
+    }
+}
+
+// Top Selling
+.top-selling {
+    margin-top: 100px;
+    &-tab-bar {
+        margin-left: 17px;
+        border-bottom: 1px solid @main-color-text-gray;
+    }
+    &-tab-bar p {
+        display: inline-block;
+        margin-right: 25px;
+        margin-bottom: -16px;
+    }
+    .top-sellers[tabindex]:focus {
+        color:@main-color-text-red;
+        border-bottom: 2px solid @main-color-text-red;
+    }
+    .featured[tabindex]:focus {
+        color:@main-color-text-red;
+        border-bottom: 2px solid @main-color-text-red;
+    }
+    .most-reviews:focus{
+        color: @main-color-text-red ;
+        border-bottom: 2px solid @main-color-text-red;            
+    }
+}
+.top-selling hr {
+    width: 120px;
+    border: 0.5px solid @main-color-text-red;
+    margin-left: 0;
+}
+.top-selling {
+    &-product {
+        margin-top: 41px;
+        .col {
+            width: 25%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+        &-name {
+            padding-left: 30px;
+            font-size: @main-font-size-14px;
+            color: @main-color-text-black;
+            font-weight: 400;
+        }
+        &-price {
+            padding-left: 30px;
+            font-size: @main-font-size-14px;
+            color: @main-color-text-black;
+            font-weight: 700;
+        }
+    }
+}
+
+// Client Review
+.client-review {
+    &-title {
+        text-align: center;
+        h3 {
+            font-size: 36px;
+        }
+    }
+    &-user {
+        text-align: center;
+        .user-comment {
+            font-size: @main-font-size-18px;
+            color: @main-color-text-gray;
+        }
+        .user-name {
+            font-size: @main-font-size-18px;
+            font-weight: 800;
+        }
+        .user-status {
+            margin-top: -10px;
+            font-size: @main-font-size-14px;
+            color: @main-color-text-gray;
+        }
+    }
+    &-line {
+        margin-top: 100px;
+        border-bottom: 1px solid @main-color-text-gray;
+    }
+}
+// Brand
+.brand {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .col {
+        width: 16.666666666667%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+}
