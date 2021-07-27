@@ -166,6 +166,10 @@ ul li {
   margin-right: 25px;
   margin-bottom: -16px;
 }
+.top-selling-product-img img {
+  display: block;
+  margin: auto;
+}
 .top-selling .top-sellers[tabindex]:focus {
   color: #FF0000;
   border-bottom: 2px solid #FF0000;
@@ -243,18 +247,19 @@ ul li {
 }
 .footer-one {
   height: 353px;
+  text-align: center;
 }
 .footer-one-logo img {
   margin-top: 100px;
-  margin-left: 43%;
 }
 .footer-one-content {
-  margin-top: 40px;
+  margin: auto;
+  width: 770px;
 }
 .footer-one-content p {
+  margin-top: 40px;
   font-size: 14px;
   color: #777;
-  text-align: center;
 }
 .footer-one-icon {
   display: flex;
@@ -405,13 +410,18 @@ ul li {
     padding: 0 15px;
     box-sizing: border-box;
   }
+  .top-selling-product-name {
+    text-align: center;
+    padding: 0;
+  }
+  .top-selling-product-price {
+    text-align: center;
+    padding: 0;
+  }
   .brand .col {
     width: 33%;
     padding: 0 30px;
     box-sizing: border-box;
-  }
-  .footer-one-logo img {
-    margin-left: 40%;
   }
   .footer-one-icon {
     margin-left: 40%;
@@ -457,23 +467,26 @@ ul li {
   .top-selling {
     margin-top: 950px;
   }
+  .top-selling-product-name {
+    text-align: center;
+    padding: 0;
+  }
+  .top-selling-product-price {
+    text-align: center;
+    padding: 0;
+  }
   .client-review-line {
     margin-top: 80px;
   }
-  .footer-one-logo img {
-    margin-left: 37%;
+  .footer-one-content {
+    width: 100%;
+  }
+  .footer-one-content p {
+    font-size: 12px;
   }
   .footer-one-icon {
     margin-top: 20px;
     margin-left: 37%;
-  }
-  .footer-one-content {
-    margin-top: 30px;
-  }
-  .footer-one-content p {
-    font-size: 12px;
-    color: #777;
-    text-align: center;
   }
   .footer-two .col-inner p {
     font-size: 12px;
@@ -557,9 +570,6 @@ ul li {
     padding: 0 30px;
     box-sizing: border-box;
   }
-  .footer-one-logo img {
-    margin-left: 31%;
-  }
   .footer-one-icon {
     margin-top: -7px;
     margin-left: 31%;
@@ -603,9 +613,6 @@ ul li {
   }
   .client-review-line {
     margin-top: 40px;
-  }
-  .footer-one-logo img {
-    margin-left: 27%;
   }
   .footer-one-icon {
     margin-top: -10px;
