@@ -1,3 +1,15 @@
+.cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    opacity: 0;
+    z-index: -1;
+}
+.cover.active {
+    z-index: 100;
+    .transit(all, .5s);
+}
 .header {
     height: 100px;
     background-color: @main-color-text-black;
@@ -18,12 +30,15 @@
                 .nav-item {
                     display: inline-block;
                     text-align: center; 
-                    padding: 0 20px;
+                    padding: 0 18px;
                     a {
                         color: @main-color-text-white;
                         font-size: @main-font-size-16px;
                     }
                 }
+            }
+            .nav-icon {
+                display: none;
             }
         }
         .option {
@@ -36,6 +51,7 @@
                     text-align: center;
                     a {
                         color: @main-color-text-white;
+                        font-size: @main-font-size-16px;
                     }
                     .fa-cart-plus {
                         border-right: 1px solid white;

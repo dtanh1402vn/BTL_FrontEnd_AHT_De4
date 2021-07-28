@@ -44,6 +44,21 @@ ul li {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
+.cover {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  opacity: 0;
+  z-index: -1;
+}
+.cover.active {
+  z-index: 100;
+  transition: all, 0.5s;
+  -webkit-transition: all, 0.5s;
+  -ms-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+}
 .header {
   height: 100px;
   background-color: #000;
@@ -68,11 +83,14 @@ ul li {
 .header-inner .menu .navbar .nav-item {
   display: inline-block;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 .header-inner .menu .navbar .nav-item a {
   color: #fff;
   font-size: 16px;
+}
+.header-inner .menu .nav-icon {
+  display: none;
 }
 .header-inner .option .navoption {
   padding: 30px 10px;
@@ -85,6 +103,7 @@ ul li {
 }
 .header-inner .option .navoption .nav-option a {
   color: #fff;
+  font-size: 16px;
 }
 .header-inner .option .navoption .nav-option .fa-cart-plus {
   border-right: 1px solid white;
@@ -120,6 +139,7 @@ ul li {
   margin-top: 62px;
   color: #fff;
   text-align: center;
+  text-transform: uppercase;
   padding: 12px;
   border: 1px solid #fff;
   box-sizing: border-box;
@@ -146,13 +166,18 @@ ul li {
 .category-product .icon {
   padding-top: 47px;
 }
+.category-product .icon .dumbells-icon {
+  padding-bottom: 15px;
+}
 .category-product .text {
-  padding-top: 30px;
+  padding-top: 18px;
 }
 .category-product .text-title {
   color: #000;
   font-weight: 700;
   font-size: 18px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
 }
 .category-product .text-summary {
   color: #777;
@@ -222,6 +247,9 @@ ul li {
 .client-review-user {
   text-align: center;
 }
+.client-review-user img {
+  margin: auto;
+}
 .client-review-user .user-comment {
   width: 770px;
   margin: auto;
@@ -238,7 +266,7 @@ ul li {
   color: #777;
 }
 .client-review-line {
-  margin-top: 100px;
+  margin-top: 150px;
   border-bottom: 1px solid #777;
 }
 .brand {
@@ -335,11 +363,20 @@ ul li {
     height: 44px;
     padding: 18px 0;
   }
-  .header-inner .menu {
-    display: none;
+  .header-inner .menu .navbar {
+    padding: 28px 20px;
+  }
+  .header-inner .menu .navbar .nav-item {
+    padding: 0 10px;
+  }
+  .header-inner .menu .navbar .nav-item a {
+    font-size: 14px;
   }
   .header-inner .option .navoption {
     padding: 20px 10px;
+  }
+  .header-inner .option .navoption .nav-option a {
+    font-size: 14px;
   }
   .banner-image {
     height: 850px;
@@ -381,6 +418,42 @@ ul li {
   .header-inner .logo-img {
     height: 34px;
     padding: 18px 0;
+  }
+  .header-inner .menu .nav-icon {
+    display: block;
+    color: #fff;
+    padding: 24px 0;
+  }
+  .header-inner .menu .navbar {
+    transition: all, 0.5s;
+    -webkit-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transform: translateX(-110%);
+    -webkit-transform: translateX(-110%);
+    -ms-transform: translateX(-110%);
+    -o-transform: translateX(-110%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    height: 40vh;
+    width: 10vw;
+    background-color: #000;
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  }
+  .header-inner .menu .navbar .nav-item {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #fff;
+  }
+  .header-inner .menu .active {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
   .header-inner .option .navoption {
     padding: 15px 10px;
@@ -435,6 +508,9 @@ ul li {
     text-align: center;
     padding: 0;
   }
+  .client-review-user .user-comment {
+    width: 600px;
+  }
   .brand .col {
     width: 33%;
     padding: 0 30px;
@@ -452,6 +528,16 @@ ul li {
   }
   .header-inner .logo-img {
     padding: 13px 0;
+  }
+  .header-inner .menu .nav-icon {
+    padding: 18px 0;
+  }
+  .header-inner .menu .navbar {
+    height: 40vh;
+    width: 12vw;
+  }
+  .header-inner .menu .navbar .nav-item a {
+    font-size: 12px;
   }
   .header-inner .option .navoption {
     padding: 10px 10px;
@@ -490,10 +576,16 @@ ul li {
     padding: 0;
   }
   .client-review-user .user-comment {
-    width: 100%;
+    width: 500px;
   }
   .client-review-line {
     margin-top: 80px;
+  }
+  .client-review .slick-dots {
+    bottom: 50px;
+  }
+  .client-review .slick-dots li button:before {
+    font-size: 8px;
   }
   .footer-one-content {
     width: 100%;
@@ -512,14 +604,31 @@ ul li {
   .header {
     height: 50px;
   }
+  .header-inner .logo {
+    margin-right: 30px;
+  }
   .header-inner .logo-img {
     padding: 8px 0;
   }
   .header-inner .menu {
-    display: none;
+    margin-right: 30px;
+  }
+  .header-inner .menu .nav-icon {
+    padding: 20px 0;
+    font-size: 10px;
+  }
+  .header-inner .menu .navbar {
+    height: 30vh;
+    width: 14vw;
+  }
+  .header-inner .menu .navbar .nav-item a {
+    font-size: 10px;
   }
   .header-inner .option .navoption {
     padding: 5px 10px;
+  }
+  .header-inner .option .navoption .nav-option a {
+    font-size: 10px;
   }
   .banner-image {
     height: 550px;
@@ -566,6 +675,7 @@ ul li {
     font-size: 18px;
   }
   .client-review-user .user-comment {
+    width: 350px;
     font-size: 10px;
   }
   .client-review-user .user-name {
@@ -574,6 +684,9 @@ ul li {
   }
   .client-review-user .user-status {
     font-size: 8px;
+  }
+  .client-review .slick-dots {
+    bottom: 30px;
   }
   .client-review-line {
     margin-top: 60px;
@@ -592,23 +705,23 @@ ul li {
     height: 24px;
     padding: 8px 0;
   }
-  .header-inner .menu {
-    display: none;
+  .header-inner .menu .nav-icon {
+    padding: 15px 0;
   }
   .header-inner .option .navoption {
-    padding: 5px 10px;
+    padding: 0 10px;
   }
   .banner-image {
     height: 450px;
   }
   .banner .content {
-    margin-top: -230px;
+    margin-top: -300px;
   }
   .banner .content h1 {
     font-size: 15px;
   }
   .banner .content h2 {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: -20px;
   }
   .banner .content p {
@@ -622,6 +735,15 @@ ul li {
   }
   .client-review-line {
     margin-top: 40px;
+  }
+  .client-review .user-comment {
+    width: 250px;
+  }
+  .client-review .slick-dots {
+    bottom: 20px;
+  }
+  .client-review .slick-dots li button:before {
+    font-size: 6px;
   }
   .footer-two .col {
     width: 100%;

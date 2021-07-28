@@ -27,6 +27,7 @@
         margin-top: 62px;
         color: @main-color-text-white;
         text-align: center;
+        text-transform: uppercase;
         padding: 12px;
         border: 1px solid @main-color-text-white;
         box-sizing: border-box;
@@ -55,13 +56,18 @@
 }
 .category-product .icon {
     padding-top: 47px;
+    .dumbells-icon {
+        padding-bottom: 15px;
+    }
 }
 .category-product .text {
-    padding-top: 30px;
+    padding-top: 18px;
     &-title {
         color: @main-color-text-black;
         font-weight: 700;
         font-size: @main-font-size-18px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
     }
     &-summary {
         color: @main-color-text-gray;
@@ -136,6 +142,9 @@
     }
     &-user {
         text-align: center;
+        img {
+            margin: auto;
+        }
         .user-comment {
             width: 770px;
             margin: auto;
@@ -153,7 +162,7 @@
         }
     }
     &-line {
-        margin-top: 100px;
+        margin-top: 150px;
         border-bottom: 1px solid @main-color-text-gray;
     }
 }
