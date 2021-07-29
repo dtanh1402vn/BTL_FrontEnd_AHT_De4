@@ -12,11 +12,10 @@
 }
 .header {
     height: 100px;
-    background-color: @main-color-text-black;
-    opacity: 0.65;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
     &-inner {
         display: flex;
-        height: 100px;
         .logo {
             margin-right: 70px;
             &-img {
@@ -26,11 +25,11 @@
         .menu {
             margin-right: 100px;
             .navbar {
-                padding: 38px 20px;
+                padding: 38px 0;
                 .nav-item {
                     display: inline-block;
-                    text-align: center; 
-                    padding: 0 18px;
+                    
+                    padding: 0 23px;
                     a {
                         color: @main-color-text-white;
                         font-size: @main-font-size-16px;
@@ -42,21 +41,23 @@
             }
         }
         .option {
+            width: 170px;
             .navoption {
-                padding: 30px 10px;
+                padding: 38px 0 38px 20px;
                 .nav-option {
                     display: inline-block;
                     width: 40px;
-                    line-height: 40px;
-                    text-align: center;
                     a {
                         color: @main-color-text-white;
                         font-size: @main-font-size-16px;
                     }
-                    .fa-cart-plus {
+                    .fa-shopping-basket {
                         border-right: 1px solid white;
                         border-left: 1px solid white;
                         padding: 0 15px 0 12px;
+                    }
+                    .fa-user {
+                        margin-left: 30px;
                     }
                 }
             }

@@ -61,12 +61,11 @@ ul li {
 }
 .header {
   height: 100px;
-  background-color: #000;
-  opacity: 0.65;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 .header-inner {
   display: flex;
-  height: 100px;
 }
 .header-inner .logo {
   margin-right: 70px;
@@ -78,12 +77,11 @@ ul li {
   margin-right: 100px;
 }
 .header-inner .menu .navbar {
-  padding: 38px 20px;
+  padding: 38px 0;
 }
 .header-inner .menu .navbar .nav-item {
   display: inline-block;
-  text-align: center;
-  padding: 0 18px;
+  padding: 0 23px;
 }
 .header-inner .menu .navbar .nav-item a {
   color: #fff;
@@ -92,23 +90,27 @@ ul li {
 .header-inner .menu .nav-icon {
   display: none;
 }
+.header-inner .option {
+  width: 170px;
+}
 .header-inner .option .navoption {
-  padding: 30px 10px;
+  padding: 38px 0 38px 20px;
 }
 .header-inner .option .navoption .nav-option {
   display: inline-block;
   width: 40px;
-  line-height: 40px;
-  text-align: center;
 }
 .header-inner .option .navoption .nav-option a {
   color: #fff;
   font-size: 16px;
 }
-.header-inner .option .navoption .nav-option .fa-cart-plus {
+.header-inner .option .navoption .nav-option .fa-shopping-basket {
   border-right: 1px solid white;
   border-left: 1px solid white;
   padding: 0 15px 0 12px;
+}
+.header-inner .option .navoption .nav-option .fa-user {
+  margin-left: 30px;
 }
 .banner {
   height: 850px;
@@ -118,12 +120,13 @@ ul li {
   width: 100%;
 }
 .banner .content {
-  margin-top: -685px;
+  margin-top: -670px;
   position: absolute;
   color: #fff;
 }
 .banner .content h1 {
   font-size: 60px;
+  margin-top: 0;
 }
 .banner .content h2 {
   font-size: 40px;
@@ -151,6 +154,9 @@ ul li {
   display: flex;
   flex-wrap: wrap;
   height: 500px;
+  -webkit-box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
 }
 .category-product .col {
   width: 33.3333%;
@@ -163,21 +169,24 @@ ul li {
   text-align: center;
   background-color: #fff;
 }
-.category-product .icon {
+.category-product .icon .dumbells-icon {
   padding-top: 47px;
 }
-.category-product .icon .dumbells-icon {
-  padding-bottom: 15px;
+.category-product .icon .strength-icon {
+  padding-top: 31px;
+}
+.category-product .icon .power-icon {
+  padding-top: 31px;
 }
 .category-product .text {
-  padding-top: 18px;
+  margin-top: 29px;
 }
 .category-product .text-title {
   color: #000;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .category-product .text-summary {
   color: #777;
@@ -195,6 +204,8 @@ ul li {
   display: inline-block;
   margin-right: 25px;
   margin-bottom: -16px;
+  font-weight: bold;
+  font-size: 18px;
 }
 .top-selling .top-sellers[tabindex]:focus {
   color: #FF0000;
@@ -235,6 +246,9 @@ ul li {
   color: #000;
   font-weight: 700;
 }
+.top-selling-product-price p {
+  margin-top: 0;
+}
 .client-review {
   margin-top: 135px;
 }
@@ -242,6 +256,7 @@ ul li {
   text-align: center;
 }
 .client-review-title h3 {
+  margin-top: 0;
   font-size: 36px;
 }
 .client-review-user {
@@ -251,12 +266,14 @@ ul li {
   margin: auto;
 }
 .client-review-user .user-comment {
+  padding-top: 30px;
   width: 770px;
   margin: auto;
   font-size: 18px;
   color: #777;
 }
 .client-review-user .user-name {
+  margin-top: 37px;
   font-size: 18px;
   font-weight: 800;
 }
@@ -373,7 +390,7 @@ ul li {
     font-size: 14px;
   }
   .header-inner .option .navoption {
-    padding: 20px 10px;
+    padding: 28px 10px;
   }
   .header-inner .option .navoption .nav-option a {
     font-size: 14px;
@@ -396,6 +413,9 @@ ul li {
   }
   .category-product {
     margin-top: -177px;
+  }
+  .category-product .d-flex {
+    box-shadow: none;
   }
   .client-review-title h3 {
     font-size: 24px;
@@ -456,7 +476,7 @@ ul li {
     -o-transform: translateX(0);
   }
   .header-inner .option .navoption {
-    padding: 15px 10px;
+    padding: 23px 10px;
   }
   .banner-image {
     height: 750px;
@@ -540,7 +560,7 @@ ul li {
     font-size: 12px;
   }
   .header-inner .option .navoption {
-    padding: 10px 10px;
+    padding: 18px 10px;
   }
   .banner-image {
     height: 650px;
@@ -565,7 +585,7 @@ ul li {
     width: 100%;
   }
   .top-selling {
-    margin-top: 950px;
+    margin-top: 1000px;
   }
   .top-selling-product-name {
     text-align: center;
@@ -625,7 +645,10 @@ ul li {
     font-size: 10px;
   }
   .header-inner .option .navoption {
-    padding: 5px 10px;
+    padding: 13px 10px;
+  }
+  .header-inner .option .navoption .nav-option {
+    width: 40px;
   }
   .header-inner .option .navoption .nav-option a {
     font-size: 10px;
@@ -661,7 +684,8 @@ ul li {
     box-sizing: border-box;
   }
   .top-selling-tab-bar p {
-    font-size: small;
+    font-size: 14px;
+    margin-right: 15px;
   }
   .top-selling-product-name {
     font-size: 12px;
@@ -709,7 +733,7 @@ ul li {
     padding: 15px 0;
   }
   .header-inner .option .navoption {
-    padding: 0 10px;
+    padding: 8px 10px;
   }
   .banner-image {
     height: 450px;
@@ -731,7 +755,7 @@ ul li {
     margin-top: -577px;
   }
   .top-selling p {
-    font-size: small;
+    font-size: 12px;
   }
   .client-review-line {
     margin-top: 40px;
