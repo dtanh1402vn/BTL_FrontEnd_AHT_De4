@@ -1,13 +1,16 @@
 //Banner
 .banner {
-    height: 850px;
+    position: relative;
     img {
-        margin-top: -100px;
         width: 100%; 
     }
-    .content {
-        margin-top: -670px;
+    .banner-content {
         position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .content {
         color: @main-color-text-white;
         h1 {
             font-size: 60px;
@@ -15,7 +18,7 @@
         }
         h2 {
             font-size: 40px;
-            margin-top: -35px;
+            margin-top: -45px;
         }
         p {
             margin-top: -10px;
@@ -37,11 +40,12 @@
 
 // Category Product
 .category-product {
-    margin-top: -77px;
-    .d-flex {
+    &-inner {
         display: flex;
         flex-wrap: wrap;
         height: 500px;
+        margin-top: -77px;
+        position: relative;
         -webkit-box-shadow: 0px 7px 11px -1px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 7px 11px -1px rgba(0,0,0,0.75);
         box-shadow: 0px 7px 11px -1px rgba(0,0,0,0.75);
@@ -89,8 +93,8 @@
 .top-selling {
     margin-top: 100px;
     &-tab-bar {
-        margin-left: 17px;
         border-bottom: 1px solid @main-color-text-gray;
+        height: 60px;
     }
     &-tab-bar p {
         display: inline-block;
@@ -98,6 +102,9 @@
         margin-bottom: -16px;
         font-weight: bold;
         font-size: @main-font-size-18px;
+    }
+    .top-sellers {
+        margin-left: 17px;
     }
     .top-sellers[tabindex]:focus {
         color:@main-color-text-red;
@@ -120,10 +127,30 @@
 .top-selling {
     &-product {
         margin-top: 41px;
+        .top-selling-list-row1 {
+            margin-bottom: 48px;
+        }
         .col {
             width: 25%;
             padding: 0 15px;
             box-sizing: border-box;
+        }
+        &-img {
+            padding-bottom: 14px;
+            .product-icon {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                text-align: center;
+                top: 12px;
+                right: 16px;
+                &-link {
+                    padding: 8px 0;
+                    .fas {
+                        display: none;
+                    }
+                }
+            }
         }
         &-name {
             padding-left: 30px;
@@ -141,6 +168,29 @@
             p {
                 margin-top: 0;
             }
+        }
+        .col-inner:hover {
+            filter: drop-shadow(0 0 1px #000);
+            background-color: @main-color-text-white;
+           .top-selling-product-img {
+               .product-icon {
+                   &-link {
+                    .fas {
+                        display: block;
+                        border: 1px solid #ddd;
+                        border-top-left-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        height: 34px;
+                        width: 34px;
+                        line-height: 34px;
+                    }
+                    .fas:hover {
+                        background-color: @main-color-text-red;
+                        color: @main-color-text-white;
+                    }
+                   }
+               }
+           }
         }
     }
 }
@@ -185,12 +235,11 @@
 }
 // Brand
 .brand {
-    margin-top: 40px;
-    margin-bottom: 40px;
     .col {
         width: 16.666666666667%;
         padding: 0 30px;
         box-sizing: border-box;
+        line-height: 90px;
         &-inner {
             text-align: center;
         }

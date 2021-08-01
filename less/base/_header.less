@@ -13,9 +13,14 @@
 .header {
     height: 100px;
     background-color: rgba(0, 0, 0, 0.6);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
     &-inner {
         display: flex;
+        justify-content: space-between;
         .logo {
             margin-right: 70px;
             &-img {

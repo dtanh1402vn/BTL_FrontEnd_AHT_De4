@@ -62,10 +62,15 @@ ul li {
 .header {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.6);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
 }
 .header-inner {
   display: flex;
+  justify-content: space-between;
 }
 .header-inner .logo {
   margin-right: 70px;
@@ -113,15 +118,18 @@ ul li {
   margin-left: 30px;
 }
 .banner {
-  height: 850px;
+  position: relative;
 }
 .banner img {
-  margin-top: -100px;
   width: 100%;
 }
-.banner .content {
-  margin-top: -670px;
+.banner .banner-content {
   position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner .content {
   color: #fff;
 }
 .banner .content h1 {
@@ -130,7 +138,7 @@ ul li {
 }
 .banner .content h2 {
   font-size: 40px;
-  margin-top: -35px;
+  margin-top: -45px;
 }
 .banner .content p {
   margin-top: -10px;
@@ -147,13 +155,12 @@ ul li {
   border: 1px solid #fff;
   box-sizing: border-box;
 }
-.category-product {
-  margin-top: -77px;
-}
-.category-product .d-flex {
+.category-product-inner {
   display: flex;
   flex-wrap: wrap;
   height: 500px;
+  margin-top: -77px;
+  position: relative;
   -webkit-box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 7px 11px -1px rgba(0, 0, 0, 0.75);
@@ -197,8 +204,8 @@ ul li {
   margin-top: 100px;
 }
 .top-selling-tab-bar {
-  margin-left: 17px;
   border-bottom: 1px solid #777;
+  height: 60px;
 }
 .top-selling-tab-bar p {
   display: inline-block;
@@ -206,6 +213,9 @@ ul li {
   margin-bottom: -16px;
   font-weight: bold;
   font-size: 18px;
+}
+.top-selling .top-sellers {
+  margin-left: 17px;
 }
 .top-selling .top-sellers[tabindex]:focus {
   color: #FF0000;
@@ -227,10 +237,30 @@ ul li {
 .top-selling-product {
   margin-top: 41px;
 }
+.top-selling-product .top-selling-list-row1 {
+  margin-bottom: 48px;
+}
 .top-selling-product .col {
   width: 25%;
   padding: 0 15px;
   box-sizing: border-box;
+}
+.top-selling-product-img {
+  padding-bottom: 14px;
+}
+.top-selling-product-img .product-icon {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  top: 12px;
+  right: 16px;
+}
+.top-selling-product-img .product-icon-link {
+  padding: 8px 0;
+}
+.top-selling-product-img .product-icon-link .fas {
+  display: none;
 }
 .top-selling-product-name {
   padding-left: 30px;
@@ -248,6 +278,23 @@ ul li {
 }
 .top-selling-product-price p {
   margin-top: 0;
+}
+.top-selling-product .col-inner:hover {
+  filter: drop-shadow(0 0 1px #000);
+  background-color: #fff;
+}
+.top-selling-product .col-inner:hover .top-selling-product-img .product-icon-link .fas {
+  display: block;
+  border: 1px solid #ddd;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 34px;
+  width: 34px;
+  line-height: 34px;
+}
+.top-selling-product .col-inner:hover .top-selling-product-img .product-icon-link .fas:hover {
+  background-color: #FF0000;
+  color: #fff;
 }
 .client-review {
   margin-top: 135px;
@@ -286,14 +333,11 @@ ul li {
   margin-top: 150px;
   border-bottom: 1px solid #777;
 }
-.brand {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 .brand .col {
   width: 16.66666667%;
   padding: 0 30px;
   box-sizing: border-box;
+  line-height: 90px;
 }
 .brand .col-inner {
   text-align: center;
@@ -330,6 +374,9 @@ ul li {
 .footer-one-icon a i {
   margin-top: 30px;
 }
+.footer-one-icon a:hover {
+  color: #fff;
+}
 .footer-one hr {
   margin-top: 54px;
 }
@@ -360,6 +407,9 @@ ul li {
 .footer-two .col-inner p {
   color: #777;
   font-size: 14px;
+}
+.footer-two .col-inner a:hover {
+  color: #fff;
 }
 .footer-copyright {
   height: 50px;
@@ -395,27 +445,34 @@ ul li {
   .header-inner .option .navoption .nav-option a {
     font-size: 14px;
   }
-  .banner-image {
-    height: 850px;
-  }
-  .banner .content {
-    margin-top: -630px;
-  }
   .banner .content h1 {
     font-size: 50px;
   }
   .banner .content h2 {
     font-size: 35px;
-    margin-top: -20px;
+    margin-top: -40px;
   }
   .banner .content p {
     font-size: 14px;
   }
-  .category-product {
-    margin-top: -177px;
-  }
-  .category-product .d-flex {
+  .category-product-inner {
     box-shadow: none;
+  }
+  .top-selling .col {
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .top-selling-product-img {
+    text-align: center;
+  }
+  .top-selling-product-name {
+    text-align: center;
+    padding: 0;
+  }
+  .top-selling-product-price {
+    text-align: center;
+    padding: 0;
   }
   .client-review-title h3 {
     font-size: 24px;
@@ -435,14 +492,23 @@ ul li {
   .header {
     height: 70px;
   }
+  .header-inner .logo {
+    order: 1;
+  }
   .header-inner .logo-img {
     height: 34px;
     padding: 18px 0;
   }
+  .header-inner .menu {
+    order: 0;
+  }
   .header-inner .menu .nav-icon {
     display: block;
     color: #fff;
-    padding: 24px 0;
+    padding: 18px 0;
+  }
+  .header-inner .menu .nav-icon .fa-bars {
+    font-size: 35px;
   }
   .header-inner .menu .navbar {
     transition: all, 0.5s;
@@ -475,20 +541,17 @@ ul li {
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
   }
+  .header-inner .option {
+    order: 3;
+  }
   .header-inner .option .navoption {
     padding: 23px 10px;
   }
-  .banner-image {
-    height: 750px;
-  }
-  .banner .content {
-    margin-top: -530px;
-  }
   .banner .content h1 {
-    font-size: 40px;
+    font-size: 28px;
   }
   .banner .content h2 {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: -20px;
   }
   .banner .content p {
@@ -500,9 +563,6 @@ ul li {
     font-size: 12px;
     padding: 9px;
   }
-  .category-product {
-    margin-top: -277px;
-  }
   .category-product .text {
     padding-top: 30px;
   }
@@ -511,22 +571,6 @@ ul li {
   }
   .category-product .text-summary {
     font-size: 12px;
-  }
-  .top-selling .col {
-    width: 50%;
-    padding: 0 15px;
-    box-sizing: border-box;
-  }
-  .top-selling-product-img {
-    text-align: center;
-  }
-  .top-selling-product-name {
-    text-align: center;
-    padding: 0;
-  }
-  .top-selling-product-price {
-    text-align: center;
-    padding: 0;
   }
   .client-review-user .user-comment {
     width: 600px;
@@ -550,7 +594,7 @@ ul li {
     padding: 13px 0;
   }
   .header-inner .menu .nav-icon {
-    padding: 18px 0;
+    padding: 14px 0;
   }
   .header-inner .menu .navbar {
     height: 40vh;
@@ -562,24 +606,15 @@ ul li {
   .header-inner .option .navoption {
     padding: 18px 10px;
   }
-  .banner-image {
-    height: 650px;
-  }
-  .banner .content {
-    margin-top: -470px;
-  }
   .banner .content h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .banner .content h2 {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: -20px;
   }
   .banner .content p {
     font-size: 10px;
-  }
-  .category-product {
-    margin-top: -377px;
   }
   .category-product .col {
     width: 100%;
@@ -634,7 +669,7 @@ ul li {
     margin-right: 30px;
   }
   .header-inner .menu .nav-icon {
-    padding: 20px 0;
+    padding: 8px 0;
     font-size: 10px;
   }
   .header-inner .menu .navbar {
@@ -653,18 +688,12 @@ ul li {
   .header-inner .option .navoption .nav-option a {
     font-size: 10px;
   }
-  .banner-image {
-    height: 550px;
-  }
-  .banner .content {
-    margin-top: -390px;
-  }
   .banner .content h1 {
-    font-size: 25px;
+    font-size: 15px;
   }
   .banner .content h2 {
-    font-size: 15px;
-    margin-top: -20px;
+    font-size: 10px;
+    margin-top: -15px;
   }
   .banner .content p {
     font-size: 8px;
@@ -675,13 +704,13 @@ ul li {
     font-size: 8px;
     padding: 3px;
   }
-  .category-product {
-    margin-top: -477px;
-  }
   .top-selling .col {
     width: 100%;
     padding: 0 15px;
     box-sizing: border-box;
+  }
+  .top-selling-tab-bar {
+    height: 40px;
   }
   .top-selling-tab-bar p {
     font-size: 14px;
@@ -730,29 +759,20 @@ ul li {
     padding: 8px 0;
   }
   .header-inner .menu .nav-icon {
-    padding: 15px 0;
+    padding: 4px 0;
   }
   .header-inner .option .navoption {
     padding: 8px 10px;
   }
-  .banner-image {
-    height: 450px;
-  }
-  .banner .content {
-    margin-top: -300px;
-  }
   .banner .content h1 {
-    font-size: 15px;
+    font-size: 10px;
   }
   .banner .content h2 {
-    font-size: 12px;
-    margin-top: -20px;
+    font-size: 8px;
+    margin-top: -10px;
   }
   .banner .content p {
     font-size: 6px;
-  }
-  .category-product {
-    margin-top: -577px;
   }
   .top-selling p {
     font-size: 12px;
