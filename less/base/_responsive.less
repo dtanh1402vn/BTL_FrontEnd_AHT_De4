@@ -48,9 +48,17 @@
     .category-product {
         &-inner {
             box-shadow: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -60px;
+            height: auto;
+            .col {
+                display: flex;
+            }
         }
     }
     .top-selling {
+        margin-top: 40px;
         .col {
             width: 50%;
             padding: 0 15px;
@@ -160,14 +168,8 @@
         }
     }
     .category-product {
-        .text {
-            padding-top: 30px;
-            &-title {
-                font-size: @main-font-size-14px;
-            }
-            &-summary {              
-                font-size: 12px
-            }
+        &-inner {
+            margin-top: -50px;
         }
     }
     .client-review {
@@ -238,14 +240,51 @@
                 font-size: 10px;
             }
         }
+        &-btn {
+            width: 100px;
+            height: 32px;
+            padding: 6px;
+        }
     }
     .category-product {
-        .col {
-            width: 100%;
+        &-inner {
+            margin-top: -45px;
+            .col {
+                .picture {
+                    width: 50%;
+                }
+                .content {
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        }
+        .icon {
+            .dumbells-icon {
+                padding-top: 20px;
+                width: 20%;
+            }
+            .strength-icon {
+                padding-top: 14px;
+                width: 15%;
+            }
+            .power-icon {
+                padding-top: 14px;
+                width: 15%;
+            }
+        }
+        .text {
+        margin-top: 16px;
+            &-title {
+                font-size: @main-font-size-14px;
+            }
+            &-summary {              
+                font-size: 12px;
+            }
         }
     }
     .top-selling {
-        margin-top: 1000px;
+        margin-top: 20px;
         &-product-name {
             text-align: center;
             padding: 0;
@@ -331,6 +370,9 @@
         }
     }
     .banner {
+        .banner-content {
+            top: 55%;
+        }
         .content {
             h1 {
                 font-size: 15px;
@@ -346,11 +388,28 @@
         &-btn {
             width: 80px;
             height: 20px;
-            font-size: 8px;
+            font-size: 10px;
             padding: 3px;
+            margin-top: 20px;
+        }
+    }
+    .category-product {
+        &-inner {
+            margin-top: -30px;
+        }
+        .text {
+            margin-top: 10px;
+            &-title {
+                font-size: 12px;
+                margin: 0;
+            }
+            &-summary {              
+                font-size: 10px;
+            }
         }
     }
     .top-selling {
+        margin-top: 10px;
         .col {
                 width: 100%;
                 padding: 0 15px;
@@ -439,6 +498,23 @@
                 margin-top: -10px;
             }
             p {
+                font-size: 6px;
+            }
+        }
+        &-btn {
+            width: 60px;
+            height: 14px;
+            font-size: 8px;
+            padding: 1px;
+        }
+    }
+    .category-product {
+        .text {
+            margin-top: 6px;
+            &-title {
+                font-size: 8px;
+            }
+            &-summary {              
                 font-size: 6px;
             }
         }
