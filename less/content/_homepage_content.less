@@ -17,15 +17,18 @@
         h1 {
             font-size: 60px;
             margin-top: 55px;
+            transform: translate(-4px, -5px);
         }
         h2 {
             font-size: 40px;
             margin-top: 70px;
+            transform: translate(-4px, -5px);
         }
         p {
             margin-top: 50px;
             font-size: 14px;
             line-height: 25px;
+            transform: translateY(-9px);
         }      
     }
     &-btn {
@@ -47,7 +50,7 @@
     &-inner {
         display: flex;
         height: 500px;
-        margin-top: -84px;
+        margin-top: -77px;
         position: relative;
         filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
         background-color: @main-color-text-white;
@@ -64,20 +67,26 @@
             height: 250px;
         }
     }
+    &-picture {
+        line-height: 0;
+        img {
+            width: 100%;
+        }
+    }
 }
 .category-product .icon {
     .dumbells-icon {
-        padding-top: 43px;
+        padding-top: 49px;
     }
     .strength-icon {
         padding-top: 31px;
     }
     .power-icon {
-        padding-top: 25px;
+        padding-top: 30px;
     }
 }
 .category-product .text {
-    margin-top: 15px;
+    margin-top: 17px;
     &-title {
         color: @main-color-text-black;
         font-weight: 700;
@@ -131,12 +140,15 @@
     &-product {
         margin-top: 41px;
         .top-selling-list-row1 {
-            margin-bottom: 65px;
+            margin-bottom: 48px;
         }
         .col {
             width: 25%;
             padding: 0 15px;
             box-sizing: border-box;
+            &-inner {
+                height: 330px;
+            }
         }
         &-img {
             padding-bottom: 18px;
@@ -175,7 +187,6 @@
         .col-inner:hover {
             filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.2));
             background-color: @main-color-text-white;
-            height: 330px;
             .top-selling-product-img {
                .product-icon {
                    &-link {

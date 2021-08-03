@@ -138,15 +138,18 @@ ul li {
 .banner .content h1 {
   font-size: 60px;
   margin-top: 55px;
+  transform: translate(-4px, -5px);
 }
 .banner .content h2 {
   font-size: 40px;
   margin-top: 70px;
+  transform: translate(-4px, -5px);
 }
 .banner .content p {
   margin-top: 50px;
   font-size: 14px;
   line-height: 25px;
+  transform: translateY(-9px);
 }
 .banner-btn {
   width: 170px;
@@ -163,7 +166,7 @@ ul li {
 .category-product-inner {
   display: flex;
   height: 500px;
-  margin-top: -84px;
+  margin-top: -77px;
   position: relative;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
   background-color: #fff;
@@ -176,17 +179,23 @@ ul li {
 .category-product .col .strength {
   height: 250px;
 }
+.category-product-picture {
+  line-height: 0;
+}
+.category-product-picture img {
+  width: 100%;
+}
 .category-product .icon .dumbells-icon {
-  padding-top: 43px;
+  padding-top: 49px;
 }
 .category-product .icon .strength-icon {
   padding-top: 31px;
 }
 .category-product .icon .power-icon {
-  padding-top: 25px;
+  padding-top: 30px;
 }
 .category-product .text {
-  margin-top: 15px;
+  margin-top: 17px;
 }
 .category-product .text-title {
   color: #000;
@@ -238,12 +247,15 @@ ul li {
   margin-top: 41px;
 }
 .top-selling-product .top-selling-list-row1 {
-  margin-bottom: 65px;
+  margin-bottom: 48px;
 }
 .top-selling-product .col {
   width: 25%;
   padding: 0 15px;
   box-sizing: border-box;
+}
+.top-selling-product .col-inner {
+  height: 330px;
 }
 .top-selling-product-img {
   padding-bottom: 18px;
@@ -282,7 +294,6 @@ ul li {
 .top-selling-product .col-inner:hover {
   filter: drop-shadow(0 0 2.5px rgba(0, 0, 0, 0.2));
   background-color: #fff;
-  height: 330px;
 }
 .top-selling-product .col-inner:hover .top-selling-product-img .product-icon-link .fas {
   display: block;
@@ -479,6 +490,9 @@ ul li {
   .category-product-inner .col {
     display: flex;
   }
+  .category-product-picture {
+    width: 50%;
+  }
   .top-selling {
     margin-top: 40px;
   }
@@ -657,9 +671,6 @@ ul li {
   .category-product-inner {
     margin-top: -45px;
   }
-  .category-product-inner .col .picture {
-    width: 50%;
-  }
   .category-product-inner .col .content {
     width: 50%;
     height: auto;
@@ -778,7 +789,7 @@ ul li {
     margin: 0;
   }
   .category-product .text-summary {
-    font-size: 12px;
+    display: none;
   }
   .top-selling {
     margin-top: 10px;
@@ -863,9 +874,6 @@ ul li {
   }
   .category-product .text-title {
     font-size: 12px;
-  }
-  .category-product .text-summary {
-    display: none;
   }
   .top-selling p {
     font-size: 12px;
