@@ -11,6 +11,7 @@
             .menu {
                 .navbar {
                     padding: 28px 20px;
+                    width: auto;
                     .nav-item {
                         padding: 0 10px;
                         a {
@@ -33,6 +34,7 @@
     }
     .banner {
         .content {
+            width: 460px;
             h1 {
                 font-size: 50px;
             }
@@ -47,7 +49,7 @@
     }
     .category-product {
         &-inner {
-            box-shadow: none;
+            background: none;
             flex-direction: column;
             align-items: center;
             margin-top: -60px;
@@ -149,6 +151,7 @@
     }
     .banner {
         .content {
+            width: 300px;
             h1 {
                 font-size: 28px;
             }
@@ -157,7 +160,7 @@
                 margin-top: -20px;
             }
             p {
-                font-size: 12px;
+                font-size: 13px;
             }
         }
         &-btn {
@@ -237,7 +240,7 @@
                 margin-top: -20px;
             }
             p {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
         &-btn {
@@ -276,10 +279,10 @@
         .text {
         margin-top: 16px;
             &-title {
-                font-size: @main-font-size-14px;
+                font-size: @main-font-size-16px;
             }
             &-summary {              
-                font-size: 12px;
+                font-size: 13px;
             }
         }
     }
@@ -313,19 +316,6 @@
     .footer {
         &-one-content {
             width: 100%;
-            p {
-                font-size: 12px;
-            }
-        }
-        &-two {
-            .col {
-                &-inner p {
-                    font-size: 12px;
-                }
-            }
-        }
-        &-copyright p {
-            font-size: 12px;
         }
     }
 }
@@ -360,10 +350,20 @@
                 .navoption {
                     padding: 13px 10px;
                     .nav-option {
-                        width: 40px;
                         a {
                             font-size: 10px;
                         }
+                    }
+                    .search {
+                        margin-right: 10px;
+                    }
+                    .shopping {
+                        .fa-shopping-basket {
+                            padding: 0 5px 0 5px;
+                        }
+                    }
+                    .user {
+                        margin-left: 10px;
                     }
                 }
             }
@@ -378,19 +378,15 @@
                 font-size: 15px;
             }
             h2 {
-                font-size: 10px;
+                font-size: 13px;
                 margin-top: -15px;
-            }
-            p {
-                font-size: 8px;
             }
         }
         &-btn {
             width: 80px;
             height: 20px;
-            font-size: 10px;
             padding: 3px;
-            margin-top: 20px;
+            margin-top: -12px;
         }
     }
     .category-product {
@@ -400,11 +396,11 @@
         .text {
             margin-top: 10px;
             &-title {
-                font-size: 12px;
+                font-size: @main-font-size-14px;
                 margin: 0;
             }
             &-summary {              
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     }
@@ -440,14 +436,13 @@
         &-user {
             .user-comment {
                 width: 350px;
-                font-size: 10px;
             }
             .user-name {
-                font-size: 10px;
+                font-size: 12px;
                 font-weight: 800;
             }
             .user-status {
-                font-size: 8px;
+                font-size: 11px;
             }
         }
         .slick-dots {
@@ -462,6 +457,13 @@
             width: 50%;
             padding: 0 30px;
             box-sizing: border-box;
+        }
+    }
+    .footer {
+        &-one-icon {
+            a i {
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -490,15 +492,10 @@
     }
     .banner {
         .content {
-            h1 {
-                font-size: 10px;
-            }
+            width: 250px;
+            line-height: 12px;
             h2 {
-                font-size: 8px;
                 margin-top: -10px;
-            }
-            p {
-                font-size: 6px;
             }
         }
         &-btn {
@@ -512,10 +509,10 @@
         .text {
             margin-top: 6px;
             &-title {
-                font-size: 8px;
+                font-size: 12px;
             }
             &-summary {              
-                font-size: 6px;
+                display: none;
             }
         }
     }

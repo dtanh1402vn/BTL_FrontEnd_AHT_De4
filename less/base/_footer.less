@@ -12,6 +12,7 @@
     &-one-content {
         margin: auto;
         width: 770px;
+        margin-top: -10px;
         p {
             margin-top: 40px;
             font-size: @main-font-size-14px;
@@ -21,9 +22,9 @@
     &-one-icon {
         margin: auto;
         width: 230px; 
+        display: flex;
         a {
-            margin-right: 20px;
-            margin-left: 15px;
+            padding: 0 22px;
             color: @main-color-text-gray;
             font-size: 18px;
             i {
@@ -44,13 +45,14 @@
         width: 25%;
         box-sizing: border-box;
         padding: 0 15px;
-        margin-top: 80px;
+        margin-top: 100px;
         .contact-row {
             display: flex;
             margin-top: -14px;
+            margin-bottom: 5px;
             .fas {
                 padding-top: 16px;
-                margin-right: 18px;
+                margin-right: 16px;
                 color: @main-color-text-gray;
                 font-size: @main-font-size-14px;
             }
@@ -64,6 +66,11 @@
             color: @main-color-text-gray;
             font-size: @main-font-size-14px;
         }
+        &-inner {
+            .link {
+                padding-bottom: 5px;
+            }
+        }
     }
     .col-inner {
         a:hover {
@@ -73,7 +80,7 @@
 }
 .footer-copyright {
     height: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     background-color: @main-color-text-black;
     p {
